@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.dmarynicz.locustowahoogpximportfix">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".ShareUnchanged"
+                  android:label="@string/share_unchanged"
+                  android:description="@string/share_unchanged_desc"
+                  android:theme="@style/AppTheme.NoActionBar"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/gpx+xml"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ShareWithUpdatedAllWaypoints"
+                  android:label="@string/share_with_updated_all_waypoints"
+                  android:description="@string/share_with_updated_all_waypoints_desc"
+                  android:theme="@style/AppTheme.NoActionBar"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/gpx+xml"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ShareWithRemovedAllWaypoints"
+                  android:label="@string/share_with_removed_all_waypoints"
+                  android:description="@string/share_with_removed_all_waypoints_desc"
+                  android:theme="@style/AppTheme.NoActionBar"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/gpx+xml"/>
+            </intent-filter>
+        </activity>
+        <provider
+                android:authorities="org.dmarynicz.locustowahoogpximportfix.fileProvider"
+                android:name="androidx.core.content.FileProvider"
+                android:grantUriPermissions="true"
+                android:exported="false" >
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

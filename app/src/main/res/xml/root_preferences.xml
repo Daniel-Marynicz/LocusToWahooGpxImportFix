@@ -1,0 +1,20 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:title="@string/preferences_header">
+
+        <ListPreference
+                app:key="share_action"
+                app:title="@string/share_action_title"
+                app:entries="@array/share_action_entries"
+                app:entryValues="@array/share_action_values"
+                app:defaultValue="ask"
+                app:useSimpleSummaryProvider="true" android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:title="@string/sync_header"/>
+
+</PreferenceScreen>

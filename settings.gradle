@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Locus To Wahoo Gpx Import Fix"
