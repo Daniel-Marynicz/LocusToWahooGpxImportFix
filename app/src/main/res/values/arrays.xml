@@ -1,16 +1,2 @@
 <resources>
-    <!-- share action preferences -->
-    <string-array name="share_action_entries">
-        <item>Ask</item>
-        <item>Update all waypoints to a wahoo compatible format</item>
-        <item>Remove all waypoints from gpx</item>
-        <item>Share unchanged</item>
-    </string-array>
-
-    <string-array name="share_action_values">
-        <item>ask</item>
-        <item>updateWayPoints</item>
-        <item>removeWayPoints</item>
-        <item>onlyShare</item>
-    </string-array>
 </resources>
